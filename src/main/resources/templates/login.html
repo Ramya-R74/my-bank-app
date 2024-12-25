@@ -5,132 +5,130 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
-    body {
-        font-family: 'Arial', sans-serif;
-        background: linear-gradient(135deg, #ff7eb3, #ff758c, #ffae42);
-        color: #ffffff;
-        margin: 0;
-        padding: 0;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-    }
+         body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #4A90E2, #50E3C2);
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    animation: gradient-move 10s ease infinite;
+}
 
-    .navbar-custom {
-        background-color: rgba(0, 0, 0, 0.8);
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 1000;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    }
+.navbar-custom {
+    background-color: #4A90E2;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
 
-    .navbar-custom a {
-        color: #ffd700 !important;
-        font-weight: bold;
-        transition: color 0.3s ease;
-    }
+.navbar-custom a {
+    color: #ffffff !important;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
 
-    .navbar-custom a:hover {
-        color: #ffffff !important;
-    }
+.navbar-custom a:hover {
+    color: #50E3C2 !important;
+}
 
-    .container {
-        max-width: 400px;
-        padding: 30px;
-        background: rgba(255, 255, 255, 0.2);
-        border-radius: 15px;
-        box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
-        border: 1px solid rgba(255, 255, 255, 0.18);
-        text-align: center;
-    }
+.container {
+    max-width: 400px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    text-align: center;
+}
 
-    .container h2 {
-        color: #fff;
-        font-size: 1.8rem;
-        margin-bottom: 20px;
-        font-weight: bold;
-    }
+.container h2 {
+    color: #ffffff;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
 
-    .form-group label {
-        color: #f9f9f9;
-        font-weight: bold;
-        text-align: left;
-        display: block;
-    }
+.form-group label {
+    color: #e0e0e0;
+    font-weight: bold;
+    text-align: left;
+    display: block;
+}
 
-    .form-group input {
-        background-color: rgba(255, 255, 255, 0.15);
-        color: #fff;
-        border: none;
-        padding: 10px;
-        border-radius: 5px;
-        width: 100%;
-        margin-top: 5px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        transition: box-shadow 0.3s ease, transform 0.2s ease;
-    }
+.form-group input {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
 
-    .form-group input:focus {
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        transform: translateY(-2px);
-        outline: none;
-    }
+.form-group input:focus {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+    outline: none;
+}
 
-    .btn {
-        background: linear-gradient(45deg, #ffae42, #ff7eb3);
-        border: none;
-        color: #fff;
-        font-size: 1rem;
-        padding: 10px 20px;
-        border-radius: 50px;
-        cursor: pointer;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+.btn {
+    background: linear-gradient(45deg, #50E3C2, #4A90E2);
+    border: none;
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-    .btn:hover {
-        transform: scale(1.05);
-        box-shadow: 0 8px 15px rgba(255, 126, 179, 0.3);
-    }
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(80, 227, 194, 0.3);
+}
 
-    .custom-link {
-        color: #ffae42;
-        text-decoration: none;
-        font-weight: bold;
-        transition: color 0.3s ease;
-    }
+.custom-link {
+    color: #50E3C2;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
 
-    .custom-link:hover {
-        color: #ffedc5;
-        text-decoration: underline;
-    }
+.custom-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
 
-    .footer {
-        background-color: rgba(0, 0, 0, 0.8);
-        color: white;
-        padding: 15px 0;
-        font-size: 14px;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        text-align: center;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    }
+.footer {
+    background-color: #4A90E2;
+    color: white;
+    padding: 15px 0;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
 
-    @keyframes gradient-move {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
-    }
+@keyframes gradient-move {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
 
-    body {
-        animation: gradient-move 10s ease infinite;
-    }
-</style>
+    </style> 
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-custom">
