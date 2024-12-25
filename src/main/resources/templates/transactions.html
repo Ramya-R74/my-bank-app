@@ -6,7 +6,7 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(to right, #ff4500, #ff6347, #ffd700);
+            background: linear-gradient(135deg, #FF4500, #FF6347);
             color: #ffffff;
             margin: 0;
             padding: 0;
@@ -15,74 +15,88 @@
             justify-content: center;
             align-items: flex-start;
             flex-direction: column;
+            animation: gradient-move 10s ease infinite;
         }
 
         .navbar-custom {
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: #FF4500;
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
 
         .navbar-custom a {
             color: #ffffff !important;
+            font-weight: bold;
+            transition: color 0.3s ease;
         }
 
-        .navbar-custom .navbar-brand {
-            font-weight: bold;
+        .navbar-custom a:hover {
+            color: #FFD700 !important;
         }
 
         .container {
             max-width: 1000px;
-            margin-top: 80px; /* Reduced margin for the table to be closer to the top */
+            margin-top: 80px;
             text-align: center;
         }
 
         h2 {
             margin-bottom: 20px;
-        }
-
-        .table-custom {
-            background-color: rgba(0, 0, 0, 0.8); /* Darker background for better contrast */
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-            overflow-x: auto; /* Ensures table is responsive */
-        }
-
-        .table-striped tbody tr:nth-of-type(odd) {
-            background-color: rgba(255, 255, 255, 0.1); /* Slightly lighter row color */
-        }
-
-        .table-striped td, .table-striped th {
-            color: #ffffff; /* White text color for visibility */
-            font-weight: bold; /* Bolder text for readability */
-            padding: 15px; /* Increase padding for better spacing */
-            border-bottom: 1px solid #ffd700; /* Yellow border for rows */
-        }
-
-        .table-striped th {
-            background-color: rgba(255, 215, 0, 0.2); /* Light golden background for headers */
-        }
-
-        .text-success {
-            color: #28a745 !important;
-        }
-
-        .text-danger {
-            color: #dc3545 !important;
-        }
-
-        .custom-link {
-            color: #ffd700;
-            text-decoration: none;
+            color: #FFD700;
             font-weight: bold;
         }
 
+        .table-custom {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            overflow-x: auto;
+            border: 1px solid rgba(255, 215, 0, 0.5);
+        }
+
+        .table-striped tbody tr:nth-of-type(odd) {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .table-striped td, .table-striped th {
+            color: #ffffff;
+            font-weight: bold;
+            padding: 15px;
+            border-bottom: 1px solid #FFD700;
+        }
+
+        .table-striped th {
+            background-color: rgba(255, 215, 0, 0.2);
+        }
+
+        .text-success {
+            color: #FFD700 !important;
+        }
+
+        .text-danger {
+            color: #FF6347 !important;
+        }
+
+        .custom-link {
+            color: #FFD700;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
         .custom-link:hover {
-            color: #ffecb3;
+            color: #ffffff;
             text-decoration: underline;
+        }
+
+        @keyframes gradient-move {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
     </style>
 </head>
@@ -124,6 +138,7 @@
 
     <p class="text-center"><a href="/dashboard" class="custom-link">Back to Dashboard</a></p>
 </div>
-
 </body>
 </html>
+
+
