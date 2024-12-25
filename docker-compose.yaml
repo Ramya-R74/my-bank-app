@@ -18,7 +18,7 @@ services:
       start_period: 30s
 
   bankapp:
-    image: ramya74/bankapp:v2
+    image: ramya74/bankapp:latest
     container_name: Bankapp
     environment:
       - SPRING_DATASOURCE_USERNAME=root
