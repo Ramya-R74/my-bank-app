@@ -3,7 +3,7 @@ pipeline{
     stages{
       stage("Fetch the code"){
         steps{
-          git url: "", branch: "master"
+          git url: "https://github.com/Ramya-R74/my-bank-app.git", branch: "master"
         }
     }
       stage("Build the code"){
